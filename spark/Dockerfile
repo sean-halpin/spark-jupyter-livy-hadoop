@@ -4,6 +4,8 @@ RUN apk --update add make automake gcc g++ subversion \
     curl tar bash python3-dev openjdk8 nss libc6-compat && \
     ln -s /lib64/ld-linux-x86-64.so.2 /lib/ld-linux-x86-64.so.2
 
+RUN apk add cmd:pip3
+
 RUN curl -L https://ftp.heanet.ie/mirrors/www.apache.org/dist/spark/spark-3.1.1/spark-3.1.1-bin-hadoop2.7.tgz -o spark-3.1.1-bin-hadoop2.7.tgz
 
 RUN tar -xzf spark-3.1.1-bin-hadoop2.7.tgz && \
